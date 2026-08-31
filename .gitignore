@@ -1,0 +1,25 @@
+# Data & Results
+data/
+results/
+logs/
+
+# Archives & Logs
+*.tar.gz
+*.zip
+*.log
+
+# Checkpoints & Python Environments
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.npy
+*.npz
+venv/
+.venv/
+__pycache__/
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
