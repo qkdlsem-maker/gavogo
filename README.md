@@ -17,6 +17,14 @@ This repository does **not** redistribute raw trajectory data. highD, exiD, uniD
 
 ## Repository structure
 
+```
+gavogo/
+├── scripts/          # Data preparation, feature engineering, evaluation scripts
+├── src/               # Core library: adapters, sampling, canonicalization, models
+├── requirements.txt   # Python dependencies
+└── .gitignore
+```
+
 
 ## Installation
 
@@ -29,3 +37,7 @@ pip install -r requirements.txt
 ## Citation
 
 If you use this benchmark or code, please cite:
+
+```
+[논문 정식 출판 후 서지정보 업데이트 예정]
+```
