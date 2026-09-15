@@ -36,3 +36,12 @@ venv/
 .vscode/
 .idea/
 .DS_Store
+
+# 원고 초안 · 내부 점검 기록 (비공개, 투고용)
+*.docx
+*.bak
+*.bak2
+verify_*.md
+원고확인.txt
+수치대조.txt
+깃허브저장소.txt
