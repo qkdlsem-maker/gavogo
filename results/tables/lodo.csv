@@ -1,0 +1,13 @@
+horizon,test_domain,auc
+3s,highD,0.577
+3s,NGSIM,0.6607
+3s,MiTra,0.6025
+3s,ETRI,0.5147
+5s,highD,0.5481
+5s,NGSIM,0.5
+5s,MiTra,0.563
+5s,ETRI,0.5706
+7s,highD,0.5459
+7s,NGSIM,0.517
+7s,MiTra,0.5564
+7s,ETRI,0.5768

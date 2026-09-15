@@ -1,0 +1,6 @@
+model,params
+XGBoost,"n_estimators=500, max_depth=6, lr=0.05, tree_method=hist"
+LightGBM,"n_estimators=500, max_depth=6, lr=0.05, num_leaves=31"
+CatBoost,"iterations=500, depth=6, lr=0.05"
+TabTransformer,"d=32, layers=2, heads=4, Adam lr=1e-3, wd=1e-5, epochs=30, bs=512"
+BiLSTM-Att,"hidden=64, bidir, attention, Adam lr=1e-3, epochs=30, bs=512, K=10 frames"

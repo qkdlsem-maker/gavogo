@@ -1,0 +1,5 @@
+target,road_type,n,auc
+ETRI,highway,261,0.4803
+EMT,urban,1444,0.5833
+uniD,urban,11099,0.4991
+exiD,highway,82924,0.4799

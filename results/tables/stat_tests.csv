@@ -1,0 +1,6 @@
+test,statistic,p_value,effect_size,significant
+Friedman (XGB/LGBM/Cat),18.2,0.0001,,True
+Wilcoxon XGBoost vs LightGBM,0.0,0.002,1.1058,True
+Wilcoxon XGBoost vs CatBoost,0.0,0.002,1.7884,True
+Wilcoxon LightGBM vs CatBoost,1.0,0.0039,0.8133,True
+Wilcoxon full vs no_game (game theory),20.0,0.4922,-0.1033,False

@@ -1,0 +1,25 @@
+target,horizon,variant,n_feats,auc
+exiD,7,full,48,0.9737
+exiD,7,-lane_id,47,0.9681
+exiD,7,-lane -vos,44,0.9665
+exiD,7,kinematic_only,34,0.9741
+exiD,7,-game,34,0.9741
+exiD,7,-top3_single,45,0.9624
+uniD,7,full,48,0.8504
+uniD,7,-lane_id,47,0.8504
+uniD,7,-lane -vos,44,0.848
+uniD,7,kinematic_only,34,0.8467
+uniD,7,-game,34,0.8467
+uniD,7,-top3_single,45,0.8518
+ETRI,7,full,48,0.6486
+ETRI,7,-lane_id,47,0.69
+ETRI,7,-lane -vos,44,0.6905
+ETRI,7,kinematic_only,34,0.6424
+ETRI,7,-game,34,0.6424
+ETRI,7,-top3_single,45,0.6317
+EMT,7,full,48,0.5645
+EMT,7,-lane_id,47,0.5767
+EMT,7,-lane -vos,44,0.5822
+EMT,7,kinematic_only,34,0.5699
+EMT,7,-game,34,0.5699
+EMT,7,-top3_single,45,0.5536

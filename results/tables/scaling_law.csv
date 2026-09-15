@@ -1,0 +1,13 @@
+horizon,n_domains,domains,ETRI_OOD_AUC
+3s,1,highD,0.4728
+3s,2,highD+NGSIM,0.4379
+3s,3,highD+NGSIM+MiTra,0.5145
+3s,4,highD+NGSIM+MiTra+EMT,0.5124
+5s,1,highD,0.4856
+5s,2,highD+NGSIM,0.4869
+5s,3,highD+NGSIM+MiTra,0.5238
+5s,4,highD+NGSIM+MiTra+EMT,0.5533
+7s,1,highD,0.531
+7s,2,highD+NGSIM,0.5012
+7s,3,highD+NGSIM+MiTra,0.5137
+7s,4,highD+NGSIM+MiTra+EMT,0.5414

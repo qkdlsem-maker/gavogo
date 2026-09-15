@@ -1,25 +1,38 @@
-# Data & Results
+# 원시 데이터 – 제공처 라이선스상 재배포 금지
 data/
-results/
-logs/
+datasets/
+raw/
+*.parquet
 
-# Archives & Logs
-*.tar.gz
-*.zip
-*.log
-
-# Checkpoints & Python Environments
-*.pth
+# 모델 가중치 · 체크포인트
+results/models/
+checkpoints/
+*.pkl
+*.joblib
 *.pt
+*.pth
 *.ckpt
 *.onnx
 *.npy
 *.npz
-venv/
-.venv/
-__pycache__/
 
-# IDE & OS
+# 로그 · 임시 산출물
+logs/
+runs/
+wandb/
+outputs/
+*.log
+*.tar.gz
+*.zip
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# IDE · OS
 .vscode/
 .idea/
 .DS_Store

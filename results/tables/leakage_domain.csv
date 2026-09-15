@@ -1,0 +1,12 @@
+dataset,ovr_auc
+highD,1.0
+NGSIM,1.0
+MiTra,0.9999
+ETRI,0.9999
+EMT,1.0
+uniD,1.0
+exiD,1.0
+__accuracy__,0.9961
+__acc_ci_low__,0.9944
+__acc_ci_high__,0.9976
+__chance__,0.1429

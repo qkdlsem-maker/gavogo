@@ -1,0 +1,4 @@
+model,ms_per_sample
+XGBoost,0.0003
+LightGBM,0.0014
+CatBoost,0.0002

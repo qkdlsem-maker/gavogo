@@ -1,0 +1,5 @@
+target,horizon,lane_mean_neg,lane_mean_pos,lane_auc_single
+exiD,7,1.201,0.988,0.5839
+uniD,7,1.114,0.855,0.6037
+ETRI,7,2.709,2.43,0.5303
+EMT,7,0.497,0.488,0.5538

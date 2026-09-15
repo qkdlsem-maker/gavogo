@@ -1,0 +1,14 @@
+error,category,count,pct
+FP,dense_traffic,13,65.0
+FP,none,6,30.0
+FP,low_speed,4,20.0
+FP,missing_neighbor,3,15.0
+FP,critical_ttc,3,15.0
+FP,off_center,3,15.0
+FN,dense_traffic,13,65.0
+FN,missing_neighbor,10,50.0
+FN,low_speed,6,30.0
+FN,no_lateral_cue,6,30.0
+FN,off_center,5,25.0
+FN,critical_ttc,3,15.0
+FN,none,2,10.0

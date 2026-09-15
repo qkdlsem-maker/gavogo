@@ -1,0 +1,8 @@
+dataset,event_vehicles,kept,discard_no_positive,discard_no_negative,discard_rate
+highD,13140,10115,2867,158,0.2302
+NGSIM,1449,1400,49,0,0.0338
+MiTra,7704,7379,320,5,0.0422
+ETRI,149,59,68,22,0.604
+EMT,3594,295,2953,346,0.9179
+uniD,5062,4168,448,446,0.1766
+exiD,70328,21085,1031,48212,0.7002

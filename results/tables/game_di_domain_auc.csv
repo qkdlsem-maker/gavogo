@@ -1,0 +1,15 @@
+feature,GT_abs,GT_di,delta
+payoff_lc_max,0.9071,0.6764,-0.2307
+payoff_gap,0.8968,0.6174,-0.2794
+stackelberg_lc_payoff,0.8299,0.6985,-0.1314
+stackelberg_advantage,0.7906,0.6226,-0.168
+nash_lc_prob,0.755,0.6671,-0.0879
+nash_lk_prob,0.755,0.6671,-0.0879
+payoff_lk,0.7544,0.5092,-0.2452
+stackelberg_lk_payoff,0.7544,0.5092,-0.2452
+nash_urgency,0.7383,0.5487,-0.1896
+stackelberg_nash_gap,0.6268,0.5559,-0.0709
+ego_best_action,0.5336,0.5252,-0.0084
+follower_best_response,0.5183,0.6211,0.1028
+threat_asymmetry,0.5181,0.5329,0.0148
+strategic_commitment,0.513,0.5049,-0.0081

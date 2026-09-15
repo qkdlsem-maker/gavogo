@@ -1,0 +1,15 @@
+axis,value,ms_per_sample
+n_features,8,0.00037
+n_features,16,0.00039
+n_features,24,0.00037
+n_features,34,0.00924
+n_features,48,0.00947
+n_train,5224,0.00915
+n_train,13061,0.0004
+n_train,26123,0.00039
+n_train,52247,0.00039
+batch_size,1,0.17276
+batch_size,10,0.02551
+batch_size,100,0.00444
+batch_size,1000,0.00064
+batch_size,5000,0.00029

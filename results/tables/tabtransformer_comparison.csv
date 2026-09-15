@@ -1,0 +1,7 @@
+horizon,model,in_domain,ETRI_OOD
+3s,XGBoost,0.8674,0.5387
+3s,TabTransformer,0.776,0.4453
+5s,XGBoost,0.795,0.5988
+5s,TabTransformer,0.7094,0.5012
+7s,XGBoost,0.7969,0.5837
+7s,TabTransformer,0.67,0.5285

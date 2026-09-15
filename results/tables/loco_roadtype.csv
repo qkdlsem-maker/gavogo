@@ -1,0 +1,7 @@
+horizon,held_out,members,n_train,n_test,auc,auc_std
+3s,Highway,highD+NGSIM+MiTra+ETRI+exiD,12543,135432,0.5442,0.0
+3s,Urban,EMT+uniD,135432,12543,0.6038,0.0
+5s,Highway,highD+NGSIM+MiTra+ETRI+exiD,9321,69790,0.5353,0.0
+5s,Urban,EMT+uniD,69790,9321,0.5555,0.0
+7s,Highway,highD+NGSIM+MiTra+ETRI+exiD,7402,43648,0.518,0.0
+7s,Urban,EMT+uniD,43648,7402,0.5825,0.0
