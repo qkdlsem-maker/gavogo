@@ -3,10 +3,11 @@ pandas==2.2.2
 pyarrow==24.0.0
 scikit-learn==1.4.1.post1
 scipy==1.13.1
-matplotlib==3.8.4
+matplotlib==3.8.0
 tqdm==4.68.4
-xgboost==3.3.0
+xgboost==3.2.0
 lightgbm==4.6.0
 catboost==1.2.10
-shap==0.46.0
+shap==0.47.2
+# installed as 2.7.0+cu126 on the reference machine; the CPU wheel reproduces all reported results
 torch==2.7.0

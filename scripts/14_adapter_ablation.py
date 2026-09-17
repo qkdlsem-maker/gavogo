@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """[T-IV #10] Adapter Ablation — Adapter가 핵심 기여임을 직접 증명.
 
-변형 (data-level ablation, 02_build_features_v2.py의 플래그로 생성)
+변형 (data-level ablation, 02_build_features.py의 플래그로 생성)
   V1 Raw             : 이웃 재구성 X, 도로좌표 X, 횡부호 정규화 X
   V2 +NeighborRecon  : 이웃 재구성 O
   V3 +Normalization  : + 도로좌표(중심선 복원) + 횡부호 정규화
@@ -10,11 +10,11 @@
 각 변형마다: in-domain(그룹분할) + zero-shot OOD(4개 타깃) 평가.
 
 선행: (아래를 7개 데이터셋 전부에 대해 실행)
-  python scripts/02_build_features_v2.py --dataset $D --suffix _V1 \
+  python scripts/02_build_features.py --dataset $D --suffix _V1 \
          --no_neighbors --no_roadframe --no_latsign
-  python scripts/02_build_features_v2.py --dataset $D --suffix _V2 \
+  python scripts/02_build_features.py --dataset $D --suffix _V2 \
          --no_roadframe --no_latsign
-  python scripts/02_build_features_v2.py --dataset $D --suffix _V3
+  python scripts/02_build_features.py --dataset $D --suffix _V3
   python scripts/03_build_game_features.py --dataset $D          # V4용 (접미사 없음)
 
 실행: python scripts/14_adapter_ablation.py

@@ -1,0 +1,3 @@
+condition,n_train,n_test,n_feats,flipped_cols,seeds,auc_mean,auc_std
+A_original,78910,201,34,,"42,0,1",0.5838,0.0
+B_lateral_sign_flipped,78910,201,34,lat_offset;lat_offset_norm;lat_speed;lat_acc;lat_drift;lat_offset_slope5;lat_speed_x_gapdiff;lat_drift_x_vosdiff,"42,0,1",0.6349,0.0

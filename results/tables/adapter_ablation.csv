@@ -1,5 +1,5 @@
 variant,n_feats,in_domain,in_domain_std,OOD_ETRI,OOD_EMT,OOD_uniD,OOD_exiD,OOD_mean
-V1 Raw (no adapter),34,0.8719,0.0019,0.6077,0.5994,0.7146,0.5439,0.6164
-V2 + Neighbor reconstruction,34,0.8731,0.0014,0.5598,0.5843,0.6089,0.5691,0.5805
-V3 + Normalization (road frame + lat sign),34,0.8812,0.0019,0.4784,0.5967,0.5198,0.4915,0.5216
-V4 Full GAVOGO (+ game theory),48,0.8815,0.0019,0.4843,0.6006,0.5079,0.487,0.52
+V1 Raw (no adapter),34,0.8718,0.0019,0.5907,0.6082,0.6856,0.541,0.6064
+V2 + Neighbor reconstruction,34,0.8737,0.0022,0.5714,0.5826,0.6286,0.5514,0.5835
+V3 + Normalization (road frame + lat sign),34,0.8813,0.0023,0.4722,0.6007,0.513,0.4846,0.5176
+V4 Full GAVOGO (+ game theory),48,0.8816,0.0015,0.4705,0.5988,0.5163,0.4814,0.5167

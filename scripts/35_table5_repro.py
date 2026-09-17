@@ -67,7 +67,7 @@ def load_backup(ds, h):
 
 # ── 소스 2: canonical에서 매번 재구성 (현재 34피처, road-frame 포함) ────────
 def dataset_lateral_sign(files, events, fps, max_files=15):
-    """scripts/02_build_features_v2.py의 dataset_lateral_sign()과 동일한 로직
+    """scripts/02_build_features.py의 dataset_lateral_sign()과 동일한 로직
     (다수결로 데이터셋 전체의 횡방향 부호를 정한다, 본문 3.2절)."""
     score = 0.0
     for cf in files[:max_files]:

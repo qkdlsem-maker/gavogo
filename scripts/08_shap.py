@@ -12,6 +12,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import shap
+import xgboost as xgb
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from src import config
 from src.features.kinematic import FEATURE_COLS as KIN
@@ -32,10 +33,14 @@ def main():
     X = X.fillna(X.median())
     m = fit_xgb(X, y, seed=config.RANDOM_STATE)
 
-    expl = shap.TreeExplainer(m)
     # 샘플링 (속도)
     Xs = X.sample(min(3000, len(X)), random_state=config.RANDOM_STATE)
-    sv = expl.shap_values(Xs)
+    # shap.TreeExplainer는 xgboost>=3.0의 base_score 직렬화 포맷("[5E-1]")을
+    # 파싱하지 못한다 (shap/shap#4288, shap>=0.50 요구 numpy>=2가 matplotlib 등과 충돌).
+    # XGBoost 내장 TreeSHAP으로 대체 — 18_tiv_remaining.py::shap_by_dataset()와 동일 방식,
+    # 수치적으로 shap.TreeExplainer와 동일한 SHAP 값을 반환한다.
+    contrib = m.get_booster().predict(xgb.DMatrix(Xs), pred_contribs=True)
+    sv = contrib[:, :-1]
 
     fig = config.FIGURES_DIR
     # summary (beeswarm)

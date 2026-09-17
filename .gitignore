@@ -4,8 +4,14 @@ datasets/
 raw/
 *.parquet
 
+# 결과물 — tables/*.csv, figures/*.png만 커밋 대상, 나머지(모델 등)는 무시
+results/*
+!results/tables/
+!results/tables/*.csv
+!results/figures/
+!results/figures/*.png
+
 # 모델 가중치 · 체크포인트
-results/models/
 checkpoints/
 *.pkl
 *.joblib
@@ -45,3 +51,23 @@ verify_*.md
 원고확인.txt
 수치대조.txt
 깃허브저장소.txt
+
+# PHASE 작업 지시/스크래치 기록 (재현성 가치 없음; docs/의 4건은 예외)
+/[0-9]*.txt
+/leak.txt
+/r7.txt
+/r6_numbers.md
+/regen_diff.md
+/regen_diff_raw.tsv
+/regen_diff_summary.txt
+/ablation_before_after_notes.md
+/env_lambda_freeze.txt
+/phase8_report.md
+/phase9_report.md
+/phase9_figures.log
+
+# 작업 로그는 저장소에 넣지 않는다
+/phase*.md
+/phase*.log
+/results_v2/
+/all_tables_dump.txt

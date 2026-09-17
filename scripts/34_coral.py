@@ -16,7 +16,7 @@ TARGETS = ["ETRI", "EMT", "uniD", "exiD"]
 H = 3
 META = {"dataset", "domain", "recording_id", "vehicle_id", "frame", "label", "event_type"}
 SEEDS = [0, 1, 2]
-OUT = Path("results/tables/34_coral.csv")
+OUT = config.TABLES_DIR / "34_coral.csv"
 
 def load(ds):
     df = pd.read_csv(config.PROCESSED_DIR / f"{ds}_gt_{H}s.csv")

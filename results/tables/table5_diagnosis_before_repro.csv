@@ -1,0 +1,5 @@
+check,command,input_file,computed_value,claimed_value,match
+exiD_globalframe_latspeed_solo,"in_domain_auc(load(exiD_globalframe_7s), cols=[""lat_speed""], seed=s) for s in [42,0,1], averaged",data/processed_leaky_backup/exiD_globalframe_7s.csv,0.9298,0.928,near-exact (diff 0.0018)
+exiD_globalframe_full_indomain,"in_domain_auc(load(exiD_globalframe_7s), cols=full_34_kinematic, seed=s) for s in [42,0,1], averaged",data/processed_leaky_backup/exiD_globalframe_7s.csv,0.9966,0.996,near-exact (diff 0.0006)
+ETRI_nosign_full_indomain,"in_domain_auc(load(ETRI_nosign_3s), cols=full_34_kinematic, seed=s) for s in [42,0,1], averaged",data/processed_leaky_backup/ETRI_nosign_3s.csv,0.723,0.41,NO MATCH (diff 0.313)
+highD_lateral_group_removed,"split_by_vehicle(highD_gt_3s, seed=42); fit_xgb+eval_auc on cols minus LAT_COLS_plus_interactions(10 cols)","data/processed/highD_gt_3s.csv (leak-free, current — per doc, no regeneration needed)",0.8165,0.82,near-exact (diff 0.0035)

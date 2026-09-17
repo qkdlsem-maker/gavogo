@@ -10,8 +10,8 @@ ttc_x_speed,0.7827,False
 gap_right_front,0.778,False
 nash_lc_prob,0.755,False
 nash_lk_prob,0.755,False
-stackelberg_lk_payoff,0.7544,False
 payoff_lk,0.7544,False
+stackelberg_lk_payoff,0.7544,False
 speed_ratio,0.7522,True
 speed_ratio,0.7522,True
 gap_right_back,0.751,False
@@ -34,11 +34,9 @@ heading_std5,0.6667,True
 vos_left,0.632,False
 stackelberg_nash_gap,0.6268,False
 risk_x_gapdiff,0.6224,False
-ttc_slope_norm,0.6023,True
 thw,0.5991,True
 thw,0.5991,True
 lane_pos,0.5975,True
-ttc_slope5,0.5968,False
 is_rightmost,0.5867,True
 vos_right,0.5796,False
 ego_speed_std5,0.5704,False
@@ -54,11 +52,13 @@ lat_offset,0.5372,False
 lat_drift,0.5356,False
 heading_approx,0.5352,True
 acc_norm,0.535,True
+ttc_slope5,0.5339,False
 ego_best_action,0.5336,False
 gap_asym,0.5335,True
 lat_offset_slope5,0.532,False
 lat_speed,0.532,False
-lat_acc,0.5313,False
+lat_acc,0.5312,False
+ttc_slope_norm,0.5281,True
 speed_ratio_domain,0.5189,True
 follower_best_response,0.5183,False
 threat_asymmetry,0.5181,False
@@ -67,5 +67,5 @@ ego_speed,0.5166,False
 ego_speed_slope5,0.5146,False
 strategic_commitment,0.513,False
 speed_slope_norm,0.5094,True
-lat_drift_x_vosdiff,0.509,False
-lat_speed_x_gapdiff,0.502,False
+lat_drift_x_vosdiff,0.5089,False
+lat_speed_x_gapdiff,0.5023,False

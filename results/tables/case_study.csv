@@ -1,5 +1,5 @@
 case,dataset,vehicle,pred_prob,actual,nash_lc_prob,nash_urgency,threat_asymmetry,payoff_gap
-1,highD,977,0.996,LANE-CHANGE,1.0,0.359,-5.0,9.367
-2,highD,653,0.996,LANE-CHANGE,1.0,0.265,-5.0,7.224
-3,highD,786,0.996,LANE-CHANGE,0.5,0.277,-5.0,8.112
-4,MiTra,484,0.002,keep,1.0,0.11,5.0,5.501
+1,MiTra,1335,0.998,LANE-CHANGE,1.0,0.11,-0.5,5.503
+2,highD,510,0.998,LANE-CHANGE,1.0,0.156,0.0,6.89
+3,highD,2213,0.997,LANE-CHANGE,0.5,1.0,5.0,4.5
+4,MiTra,2432,0.0,keep,0.0,0.0,0.0,-0.5

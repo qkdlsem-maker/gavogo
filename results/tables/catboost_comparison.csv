@@ -1,4 +1,4 @@
 model,in_domain,ETRI_OOD
-XGBoost,0.839,0.6054
-LightGBM,0.8369,0.6346
-CatBoost,0.8333,0.6781
+XGBoost,0.8677,0.4865
+LightGBM,0.8653,0.4933
+CatBoost,0.8629,0.49

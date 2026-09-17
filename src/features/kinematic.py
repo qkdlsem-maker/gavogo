@@ -27,6 +27,8 @@ FEATURE_COLS = BASE_COLS + GAP_COLS + VOS_COLS + ROLL_COLS + LAT_COLS + INT_COLS
 
 
 # ── 구 프로토콜(cross-vehicle) 샘플러. 비교/재현용 ────────────────────
+# 논문의 conventional(누수 있는) 비교군 전용. leak-free 파이프라인은
+#  sampling.py::build_samples_within() 을 쓴다.
 def build_samples(canon, events, horizon_frames, lk_interval=25, random_state=42):
     rid = canon["recording_id"].iloc[0]
     H = horizon_frames

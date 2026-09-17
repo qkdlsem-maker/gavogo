@@ -1,28 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this benchmark or code, please cite the article below."
-title: "GAVOGO: A Leak-Free Benchmark for Cross-Domain Lane-Change Intention Prediction"
-authors:
-  - family-names: Choi
-    given-names: Hyerim
-    affiliation: "Pukyong National University"
-  - family-names: Kim
-    given-names: Tae-Kook
-    affiliation: "Pukyong National University"
-  - family-names: Kim
-    given-names: Tae-Wan
-version: 1.0.0
-date-released: 2026-09-14
-url: "https://github.com/qkdlsem-maker/gavogo"
+message: "Citation information will be completed on acceptance."
+title: "A Leak-Free Benchmark for Cross-Domain Lane-Change Intention Prediction"
+type: software
 license: MIT
-preferred-citation:
-  type: article
-  title: "A Leak-Free Benchmark for Cross-Domain Lane-Change Intention Prediction: Near-Chance Zero-Shot Transfer Across Seven Naturalistic Trajectory Datasets"
-  authors:
-    - family-names: Choi
-      given-names: Hyerim
-    - family-names: Kim
-      given-names: Tae-Kook
-    - family-names: Kim
-      given-names: Tae-Wan
-  journal: "Engineering Applications of Artificial Intelligence"
-  year: 2026

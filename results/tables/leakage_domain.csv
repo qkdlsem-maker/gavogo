@@ -6,7 +6,7 @@ ETRI,0.9999
 EMT,1.0
 uniD,1.0
 exiD,1.0
-__accuracy__,0.9961
-__acc_ci_low__,0.9944
-__acc_ci_high__,0.9976
+__accuracy__,0.9965
+__acc_ci_low__,0.995
+__acc_ci_high__,0.9979
 __chance__,0.1429

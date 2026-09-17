@@ -2,8 +2,11 @@
 
 A leak-free benchmark for cross-domain lane-change intention prediction.
 
-Official code for **"A Leak-Free Benchmark for Cross-Domain Lane-Change Intention Prediction:
-Near-Chance Zero-Shot Transfer Across Seven Naturalistic Trajectory Datasets."**
+Code and benchmark for **"A Leak-Free Benchmark for Cross-Domain Lane-Change Intention
+Prediction: Near-Chance Zero-Shot Transfer Across Seven Naturalistic Trajectory Datasets."**
+
+> This repository is under double-anonymized review. Author, institution and funding
+> information is omitted until acceptance.
 
 ---
 
@@ -16,20 +19,24 @@ convention and re-measures what is left.
 
 | Shortcut | How it arises | Diagnostic | Reading |
 | --- | --- | --- | --- |
-| Vehicle identity | Lane-keeping negatives drawn from vehicles that never change lanes, so the label is nearly a function of vehicle id | group–label purity | **0.96–0.99** conventional → **0.000** here |
+| Vehicle identity | Lane-keeping negatives drawn from vehicles that never change lanes, so the label is nearly a function of vehicle id | group–label purity | **0.18–0.96** conventional → **0.000** here |
 | Split leakage | Row-level splitting puts near-identical consecutive frames of one vehicle on both sides | split-granularity audit | group-disjoint at `(dataset, recording, vehicle)` |
-| Road geometry | "Lateral" defined on a fixed global axis, so tracking a curved lane looks like a maneuver | single-feature AUC of lateral speed | exiD **0.928** global → **0.774** road-relative |
+| Road geometry | "Lateral" defined on a fixed global axis, so tracking a curved lane looks like a maneuver | single-feature AUC of lateral speed | exiD **0.930** global → **0.773** road-relative |
 
-After removing them, in-domain AUC is **0.88** and zero-shot transfer across four unseen target
-domains averages **0.520** (pooled 0.486, 95% CI [0.482, 0.489]).
+After removing them, in-domain AUC is **0.88**, while zero-shot transfer across four unseen target
+domains averages **0.517** (pooled **0.493**, 95% CI [0.489, 0.497] — at chance level).
+Broader held-out controls span approximately 0.445–0.684. No evaluated normalization, rank
+transform, topology encoding, correlation alignment or alternative model class recovers transfer.
 
 ## What this repository provides
 
 - **Dataset adapters** that map seven heterogeneous naturalistic driving datasets
-  (highD, NGSIM, MiTra, ETRI, EMT, uniD, exiD) onto one canonical schema
+  (highD, NGSIM, MiTra, ETRI, EMT, uniD, exiD; five countries) onto one canonical schema
 - **Within-vehicle negative sampling** and **road-frame canonicalization**
 - A **group–label purity diagnostic** that runs on any grouped dataset without training a model
 - Every script that produces a table or figure in the paper
+- The **result tables and figures as released** (`results/tables/`, `results/figures/`), so the
+  reported numbers can be checked without re-running the pipeline
 
 It does **not** redistribute raw trajectory data.
 
@@ -38,23 +45,27 @@ It does **not** redistribute raw trajectory data.
 ## Installation
 
 ```bash
-git clone https://github.com/qkdlsem-maker/gavogo.git
+git clone <repository-url>
 cd gavogo
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-The core pipeline needs only `requirements.txt`. Four scripts need extras:
-
-```bash
-pip install lightgbm catboost shap torch
-```
+The core pipeline needs only `requirements.txt`. Some scripts need extras:
 
 | Extra | Needed by |
 | --- | --- |
 | `lightgbm`, `catboost` | `19_baselines_all.py`, `11_significance.py`, `18_tiv_remaining.py` |
 | `torch` | `19_baselines_all.py`, `04c_tabtransformer.py`, `13_dl_latency.py` |
 | `shap` | `18_tiv_remaining.py`, `08_shap.py`, `fig_shap_ieee.py` |
+
+```bash
+pip install lightgbm catboost shap torch
+```
+
+`19_baselines_all.py` and `13_dl_latency.py` exit early without `torch`, leaving any previously
+written CSV in place. Install `torch` before a full run, or the two affected tables will silently
+retain stale values.
 
 ## Getting the data
 
@@ -65,11 +76,11 @@ Paths, frame rates and recording ranges are declared in `src/config.py`.
 | --- | --- | --- | --- |
 | highD | Germany | Highway | levelXdata |
 | exiD | Germany | Highway + ramp | levelXdata |
-| uniD | — | Urban | levelXdata |
+| uniD | Germany | Urban | levelXdata |
 | NGSIM | USA | Highway | US FHWA |
 | MiTra | Italy | Highway | third-party licence |
 | ETRI | Korea | Highway | ETRI |
-| EMT | — | Urban | original provider |
+| EMT | United Arab Emirates | Urban | original provider |
 
 ## Quick start — run the diagnostic on your own data
 
@@ -81,24 +92,48 @@ Prints group–label purity and in-domain AUC per dataset. Purity near 1.0 means
 close to a deterministic function of group identity, and any AUC measured on that sample set is
 not a skill estimate.
 
-## Pipeline
-
-```bash
-python scripts/01_build_events.py        # raw → canonical records → lane-change events
-python scripts/02_build_features.py      # canonical + events → 34 kinematic/spatial/lateral features
-python scripts/03_build_game_features.py # + 14 absolute-unit strategic descriptors
-python scripts/03b_build_game_di.py      # + 14 dimensionless strategic descriptors, Nash solver stats
-python scripts/04_train.py               # joint in-domain training and zero-shot evaluation
-```
+---
 
 ## Reproducing the paper
+
+### Full pipeline
+
+```bash
+bash run_all.sh
+```
+
+`run_all.sh` is the authoritative execution order: 63 invocations in one pass — four
+per-dataset build steps across seven datasets (28), then 28 analysis scripts, then seven
+figure-only scripts. **Order matters.** Several analysis scripts consume intermediates written
+by earlier ones, and running a script in isolation against a partially built `results/` tree can
+produce values that differ from the released ones.
+
+Expect roughly five to six hours on a single machine, dominated by the per-dataset feature build
+and the adaptation sweep.
+
+### Stage 1 — per dataset
+
+```bash
+python scripts/01_build_events.py        --dataset highD   # raw → canonical records → lane-change events
+python scripts/02_build_features.py      --dataset highD   # + 34 kinematic/spatial/lateral features (leak-free sampler)
+python scripts/03_build_game_features.py --dataset highD   # + 14 absolute-unit strategic descriptors
+python scripts/03b_build_game_di.py      --dataset highD   # + 14 dimensionless descriptors, Nash solver stats
+```
+
+`02_build_features.py` uses within-vehicle negative sampling
+(`src/features/sampling.py::build_samples_within`). The conventional cross-vehicle sampler
+(`src/features/kinematic.py::build_samples`) is retained only so that the leakage contrast in
+Table 5 can be reproduced; it is never used to build the benchmark itself.
+
+### Table and figure map
 
 | Table / Figure | Script | Output |
 | --- | --- | --- |
 | Table 4 — datasets, sample counts | `29_dataset_stats.py` | `dataset_stats.csv` |
-| Table 5 — vehicle-identity shortcut | `27_conventional_leakage.py`, `diag_purity_all.py` | `identity_leakage_contrast.csv`, `diag_purity_all.csv` |
-| Table 6 — in-domain AUC | `04_train.py` | `joint_results.csv` |
-| Table 7 — zero-shot OOD | `04_train.py` | `joint_results.csv` |
+| Table 5 — vehicle-identity shortcut | `35_table5_repro.py`, `27_conventional_leakage.py`, `diag_purity_all.py` | `table5_repro.csv`, `identity_leakage_contrast.csv`, `diag_purity_all.csv` |
+| Table 6 — in-domain AUC, per-domain rows | `04_train.py` | `joint_results.csv` |
+| Table 6 — in-domain AUC, pooled row | `19_baselines_all.py` | `baselines_all.csv` |
+| Table 7 — zero-shot OOD | `19_baselines_all.py` | `baselines_all.csv` |
 | Table 8 — OOD by road type | `24_roadtype.py` | `roadtype_zeroshot.csv`, `roadtype_highway_lodo.csv` |
 | Table 9 — domain-invariant representations | `16_domain_invariant.py`, `34_coral.py` | `domain_invariant.csv`, `34_coral.csv` |
 | Table 10 — adapter ablation | `14_adapter_ablation.py` | `adapter_ablation.csv` |
@@ -126,7 +161,8 @@ python scripts/04_train.py               # joint in-domain training and zero-sho
 
 Also available: `07_lodo.py` (leave-one-domain-out), `15_loco.py` (leave-one-country-out and
 leave-one-road-type-out), `32_purity_auc.py` (purity against AUC inflation),
-`26_leakage_quant.py` (leakage decomposition).
+`26_leakage_quant.py` (leakage decomposition), `diag_shortcut.py` (single-feature and lane-index
+shortcut audits).
 
 Outputs are written to `results/tables/` and `results/figures/`.
 
@@ -139,6 +175,47 @@ Outputs are written to `results/tables/` and `results/figures/`.
 | Correlation alignment (CORAL) | 0, 1, 2 |
 | Leave-one-country-out, leave-one-road-type-out | 42, 0, 1, 7, 123 |
 | Primary zero-shot reference fit | 42 |
+
+---
+
+## Reproducibility
+
+**The released CSVs are the source of record.** The files in `results/tables/` are the exact
+outputs behind the tables in the paper. They are committed so that every reported number can be
+traced to a file without re-running anything.
+
+**Re-running reproduces those numbers within seed-level variation, not bit-for-bit.** Boosted-tree
+fits depend on library version and thread count, and the pipeline's own spread across seeds is the
+right yardstick. Measured on seeds 42 / 0 / 1:
+
+```
+XGBoost in-domain AUC = 0.8800 / 0.8811 / 0.8836   →   mean 0.8816, s.d. 0.0015
+```
+
+The manuscript is single-sourced to these CSVs: every reported number was checked against the
+file that produces it. A re-run on a different machine agrees to within the spread above on
+aggregate metrics (for example the domain classifier at 0.9965 and a pooled OOD sample count of 95,728). Per-class values computed on small target sets move
+further: ETRI contributes only ~200 test rows, so a handful of borderline predictions shifts its
+per-class recall by several points while leaving aggregate accuracy unchanged. Numbers reported
+for small targets should be read with that in mind — the paper states the corresponding
+confidence intervals.
+
+**Pin the environment if you need closer agreement.** `requirements.txt` carries the versions
+used for the released run. Installing additional packages mid-run can silently change results:
+in our own history, installing `shap` upgraded `numpy` to 2.x and broke `matplotlib` for the rest
+of that session.
+
+### A note on the released history
+
+An earlier state of this repository could not reproduce its own reported numbers. Two feature
+build scripts — the conventional sampler and the leak-free one — wrote to the same output
+filename, so whichever ran last silently overwrote the other's features. The numbers in the paper
+were correct; the repository could not regenerate them. The scripts now write to distinct paths,
+`run_all.sh` fixes the order, and the released CSVs are committed alongside the code. We record
+this because it is exactly the class of silent failure the paper's reporting checklist
+(Section 7.6) is meant to catch.
+
+---
 
 ## Repository layout
 
@@ -157,6 +234,10 @@ gavogo/
 │       ├── train.py            XGBoost fit, group-disjoint splitting
 │       └── baselines.py        LightGBM, CatBoost, TabTransformer, BiLSTM
 ├── scripts/                    one script per table or figure — see the map above
+├── results/
+│   ├── tables/                 released CSVs behind every table
+│   └── figures/                released figures
+├── run_all.sh                  authoritative execution order (63 invocations)
 ├── requirements.txt
 └── README.md
 ```
@@ -180,18 +261,7 @@ prediction, speaker verification.
 
 ## Citation
 
-```bibtex
-@article{choi2026gavogo,
-  title   = {A Leak-Free Benchmark for Cross-Domain Lane-Change Intention Prediction:
-             Near-Chance Zero-Shot Transfer Across Seven Naturalistic Trajectory Datasets},
-  author  = {Choi, Hyerim and Kim, Tae-Kook and Kim, Tae-Wan},
-  journal = {Engineering Applications of Artificial Intelligence},
-  year    = {2026},
-  note    = {Under review}
-}
-```
-
-<!-- 채택 후 volume, pages, DOI 를 채우고 note 줄을 지우세요. Zenodo DOI 를 받으면 여기에 함께 적으세요. -->
+Citation details will be added on acceptance.
 
 ## License
 
