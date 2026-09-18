@@ -1,0 +1,9 @@
+Block,Count,Representative fields
+Base fields,7,"ego_speed, ego_acc, lane_id, ttc, thw, dhw, preceding_vx"
+Adjacent-lane gaps,4,"gap_left_front, gap_left_back, gap_right_front, gap_right_back"
+Operating space,2,"vos_left, vos_right"
+Rolling variables,6,"ego_speed_mean5, ego_speed_std5, ego_speed_slope5, ttc_mean5, ttc_min5, ttc_slope5"
+Lateral variables,8,"lat_offset, lat_offset_norm, lat_speed, lat_acc, lat_drift, lat_offset_slope5, lat_speed_std5, abs_lat_speed_max5"
+Interaction variables,7,"ttc_x_speed, gap_diff, speed_ratio, vos_diff, risk_x_gapdiff, lat_speed_x_gapdiff, lat_drift_x_vosdiff"
+Strategic descriptors,14,Common selected Nash and Stackelberg descriptor columns
+Total,48,34 kinematic and relational plus 14 strategic

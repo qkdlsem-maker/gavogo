@@ -1,0 +1,5 @@
+Dataset,Purity by group,AUC (all vehicles),AUC (mixed-label vehicles only),Δ
+highD,0.962,0.9365,0.8277,−0.1088
+NGSIM,0.786,0.8706,0.7937,−0.0769
+MiTra,0.673,0.9257,0.8803,−0.0454
+exiD (7 s),0.901,0.9945,0.9596,−0.0349

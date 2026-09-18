@@ -1,5 +1,17 @@
 cff-version: 1.2.0
-message: "Citation information will be completed on acceptance."
-title: "A Leak-Free Benchmark for Cross-Domain Lane-Change Intention Prediction"
+message: "Please cite this versioned research software and the original dataset providers."
 type: software
+title: "GAVOGO: Recording identities and feature timing affect the evaluation of lane change prediction across datasets"
+authors:
+  - family-names: Choi
+    given-names: Hyerim
+  - family-names: Kim
+    given-names: Tae-Kook
+  - family-names: Kim
+    given-names: Tae-Wan
+version: sr-r20-audit
+date-released: '2026-09-18'
+repository-code: 'https://github.com/qkdlsem-maker/gavogo'
+url: 'https://github.com/qkdlsem-maker/gavogo/releases/tag/sr-r20-audit'
 license: MIT
+abstract: "Author software is MIT. Dataset and derived-result reuse conditions are separate; see DATA_LICENSES.md. Scientific Reports submission preparation; no publication DOI assigned."

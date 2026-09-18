@@ -1,0 +1,18 @@
+{
+  "python": "3.11.7 (main, Dec 15 2023, 18:12:31) [GCC 11.2.0]",
+  "packages": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "pyarrow": "14.0.2",
+    "scikit-learn": "1.4.1.post1",
+    "scipy": "1.13.1",
+    "xgboost": "3.2.0",
+    "torch": "2.7.0"
+  },
+  "threads": 8,
+  "env_used": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "8"
+  }
+}

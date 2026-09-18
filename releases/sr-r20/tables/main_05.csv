@@ -1,0 +1,4 @@
+Feature,Full input,Censored input,Absolute change
+ego_speed,12.562,10.613,1.949
+ego_acc,0.300,0.150,0.150
+preceding_vx,12.562,10.613,1.949

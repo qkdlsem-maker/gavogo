@@ -1,0 +1,7 @@
+Evaluation set,Mean AUC,Seed SD (denominator 3)
+Source test,0.8700,0.0012
+ETRI,0.4867,0.0062
+uniD,0.5226,0.0227
+exiD,0.4650,0.0150
+Target macro,0.4914,0.0140
+Pooled targets,0.4765,0.0149

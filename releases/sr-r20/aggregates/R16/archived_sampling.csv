@@ -1,0 +1,5 @@
+dataset,horizon,purity,auc_all,auc_mixed_only
+highD,3,0.962,0.9365,0.8277
+NGSIM,3,0.7862,0.8706,0.7937
+MiTra,3,0.6732,0.9257,0.8803
+exiD,7,0.9007,0.9945,0.9596

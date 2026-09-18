@@ -1,0 +1,24 @@
+{
+  "date": "2026-09-18",
+  "public_tables": 13,
+  "aggregate_figure_pairs": 7,
+  "pixel_identical_to_desktop": 0,
+  "rendering_note": "Server and desktop plotting versions differ; numerical inputs verified, original fixed figure hashes preserved. No pixel identity claimed.",
+  "functional_tests_passed": 14,
+  "private_prediction_metrics_checked": {
+    "R16": 186,
+    "R17": 132
+  },
+  "private_prediction_access_in_public_replay": "blocked by audit hook",
+  "bootstrap_repeated": false,
+  "trained": false,
+  "B3_executed": false,
+  "SHAP_array_fields_inspected": [
+    "values",
+    "bias",
+    "features",
+    "feature_names",
+    "margin"
+  ],
+  "SHAP_NPZ_files_withheld": 5
+}

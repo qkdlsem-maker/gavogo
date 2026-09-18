@@ -1,0 +1,5 @@
+# Long-term archive follow-up
+
+No Zenodo account, authorization link or deposit was created. No existing repository webhook was listed at the time of release preparation; this is not proof about every GitHub App authorization. No DOI is assigned in CITATION.cff. After public release, check whether any automatic deposition exists before making another deposit. A future code-only DOI archive should preserve the exact public tag and software MIT notice. Including aggregate/results requires their distinct terms to be represented accurately rather than applying MIT to the entire archive. Final availability wording must use a real issued DOI, never this draft.
+
+Metadata draft: title = GAVOGO: Recording identities and feature timing affect the evaluation of lane change prediction across datasets; creators in order Hyerim Choi, Tae-Kook Kim, Tae-Wan Kim; version sr-r20-audit; repository https://github.com/qkdlsem-maker/gavogo; release https://github.com/qkdlsem-maker/gavogo/releases/tag/sr-r20-audit. Publication/acceptance and paper DOI fields intentionally absent.

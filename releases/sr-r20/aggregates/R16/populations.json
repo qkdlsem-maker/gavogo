@@ -1,0 +1,44 @@
+[
+  {
+    "dataset": "MiTra",
+    "n": 27465,
+    "vehicles": 7379,
+    "positives": 13744,
+    "purity": 0.0
+  },
+  {
+    "dataset": "NGSIM",
+    "n": 4268,
+    "vehicles": 1400,
+    "positives": 2135,
+    "purity": 0.0
+  },
+  {
+    "dataset": "highD",
+    "n": 20514,
+    "vehicles": 10115,
+    "positives": 10301,
+    "purity": 0.0
+  },
+  {
+    "dataset": "ETRI",
+    "n": 261,
+    "vehicles": 59,
+    "positives": 133,
+    "purity": 0.0
+  },
+  {
+    "dataset": "uniD",
+    "n": 11099,
+    "vehicles": 4168,
+    "positives": 5663,
+    "purity": 0.0
+  },
+  {
+    "dataset": "exiD",
+    "n": 82924,
+    "vehicles": 21085,
+    "positives": 49422,
+    "purity": 0.0
+  }
+]

@@ -1,0 +1,7 @@
+Dataset,Country,Role,Frames/s,Rows,Vehicles,Positive rows
+highD,Germany,Source,25,"20,514","10,115","10,301"
+NGSIM,USA,Source,10,"4,268","1,400","2,135"
+MiTra,Italy,Source,30,"27,465","7,379","13,744"
+ETRI,Korea,Target,10,261,59,133
+uniD,Germany,Target,25,"11,099","4,168","5,663"
+exiD,Germany,Target,25,"82,924","21,085","49,422"

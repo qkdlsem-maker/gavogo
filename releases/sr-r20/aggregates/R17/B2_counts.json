@@ -1,0 +1,8 @@
+{
+  "total_pairs": 234,
+  "both_missing": 28,
+  "finite_pairs": 206,
+  "finite_equal": 203,
+  "finite_changed": 3,
+  "B3": "not executed: not executable under available provenance"
+}

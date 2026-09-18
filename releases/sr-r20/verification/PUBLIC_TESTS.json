@@ -1,0 +1,159 @@
+{
+  "public_only_private_access_guard": true,
+  "tables_checked": 13,
+  "figures": [
+    {
+      "figure": "fig7_recording_uncertainty.png",
+      "regenerated": true,
+      "pixel_identical": false
+    },
+    {
+      "figure": "fig8_recording_gain.png",
+      "regenerated": true,
+      "pixel_identical": false
+    },
+    {
+      "figure": "fig3_attribution.png",
+      "regenerated": true,
+      "pixel_identical": false
+    },
+    {
+      "figure": "fig2_samefit.png",
+      "regenerated": true,
+      "pixel_identical": false
+    },
+    {
+      "figure": "fig6_paired_gain.png",
+      "regenerated": true,
+      "pixel_identical": false
+    },
+    {
+      "figure": "fig1_corrections.png",
+      "regenerated": true,
+      "pixel_identical": false
+    },
+    {
+      "figure": "fig5_adaptation.png",
+      "regenerated": true,
+      "pixel_identical": false
+    }
+  ],
+  "boundary_tests": 8,
+  "new_runner_tests": 6,
+  "missing_inputs_returncode": 1,
+  "historical_A_code_hashes": [
+    {
+      "path": "code/common_v1.py",
+      "matches_historical_freeze": true
+    },
+    {
+      "path": "code/run_A_v1.py",
+      "matches_historical_freeze": true
+    },
+    {
+      "path": "code/r16_snapshot/src/__init__.py",
+      "matches_historical_freeze": true
+    },
+    {
+      "path": "code/r16_snapshot/src/config.py",
+      "matches_historical_freeze": true
+    },
+    {
+      "path": "code/r16_snapshot/src/features/game_theory.py",
+      "matches_historical_freeze": true
+    },
+    {
+      "path": "code/r16_snapshot/src/features/roadframe.py",
+      "matches_historical_freeze": true
+    },
+    {
+      "path": "code/r16_snapshot/src/features/game_core_di.py",
+      "matches_historical_freeze": true
+    },
+    {
+      "path": "code/r16_snapshot/src/features/game_theory_di.py",
+      "matches_historical_freeze": true
+    },
+    {
+      "path": "code/r16_snapshot/src/features/game_core.py",
+      "matches_historical_freeze": true
+    },
+    {
+      "path": "code/r16_snapshot/src/features/sampling.py",
+      "matches_historical_freeze": true
+    },
+    {
+      "path": "code/r16_snapshot/src/features/kinematic.py",
+      "matches_historical_freeze": true
+    },
+    {
+      "path": "code/r16_snapshot/src/features/__init__.py",
+      "matches_historical_freeze": true
+    },
+    {
+      "path": "code/r16_snapshot/src/data/base_adapter.py",
+      "matches_historical_freeze": true
+    },
+    {
+      "path": "code/r16_snapshot/src/data/ngsim_adapter.py",
+      "matches_historical_freeze": true
+    },
+    {
+      "path": "code/r16_snapshot/src/data/exid_adapter.py",
+      "matches_historical_freeze": true
+    },
+    {
+      "path": "code/r16_snapshot/src/data/emt_adapter.py",
+      "matches_historical_freeze": true
+    },
+    {
+      "path": "code/r16_snapshot/src/data/emt_annotations.py",
+      "matches_historical_freeze": true
+    },
+    {
+      "path": "code/r16_snapshot/src/data/etri_adapter.py",
+      "matches_historical_freeze": true
+    },
+    {
+      "path": "code/r16_snapshot/src/data/schema.py",
+      "matches_historical_freeze": true
+    },
+    {
+      "path": "code/r16_snapshot/src/data/unid_adapter.py",
+      "matches_historical_freeze": true
+    },
+    {
+      "path": "code/r16_snapshot/src/data/highd_adapter.py",
+      "matches_historical_freeze": true
+    },
+    {
+      "path": "code/r16_snapshot/src/data/mitra_adapter.py",
+      "matches_historical_freeze": true
+    },
+    {
+      "path": "code/r16_snapshot/src/data/__init__.py",
+      "matches_historical_freeze": true
+    },
+    {
+      "path": "code/r16_snapshot/src/data/events.py",
+      "matches_historical_freeze": true
+    },
+    {
+      "path": "code/r16_snapshot/src/models/metrics.py",
+      "matches_historical_freeze": true
+    },
+    {
+      "path": "code/r16_snapshot/src/models/train.py",
+      "matches_historical_freeze": true
+    },
+    {
+      "path": "code/r16_snapshot/src/models/baselines.py",
+      "matches_historical_freeze": true
+    },
+    {
+      "path": "code/r16_snapshot/src/models/__init__.py",
+      "matches_historical_freeze": true
+    }
+  ],
+  "source_label_restoration": "Two distinct module docstrings were anonymized in R19 handoff; public R16/R17 copies restored original GAVOGO labels using unchanged server frozen source; algorithms unchanged."
+}

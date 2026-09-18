@@ -1,0 +1,136 @@
+{
+  "xgb": {
+    "summary": [
+      {
+        "condition": "source_median_before",
+        "eval_set": "ETRI",
+        "mean": 0.47051221804511273,
+        "sd": 0.017650614070181224
+      },
+      {
+        "condition": "source_median_before",
+        "eval_set": "exiD",
+        "mean": 0.4814260652679329,
+        "sd": 0.014838025593219712
+      },
+      {
+        "condition": "source_median_before",
+        "eval_set": "in_domain",
+        "mean": 0.8815808934151553,
+        "sd": 0.0015016508665360857
+      },
+      {
+        "condition": "source_median_before",
+        "eval_set": "uniD",
+        "mean": 0.5163352896266558,
+        "sd": 0.01884433404820016
+      },
+      {
+        "condition": "train_median_after",
+        "eval_set": "ETRI",
+        "mean": 0.4644031954887217,
+        "sd": 0.007461675050846064
+      },
+      {
+        "condition": "train_median_after",
+        "eval_set": "exiD",
+        "mean": 0.4891536294481525,
+        "sd": 0.011300884178820955
+      },
+      {
+        "condition": "train_median_after",
+        "eval_set": "in_domain",
+        "mean": 0.881380366408818,
+        "sd": 0.0018787940167535222
+      },
+      {
+        "condition": "train_median_after",
+        "eval_set": "uniD",
+        "mean": 0.5080627474792047,
+        "sd": 0.020107951642504302
+      }
+    ],
+    "macro": [
+      {
+        "condition": "source_median_before",
+        "mean": 0.4894245243132338,
+        "sd": 0.0038297077953839574
+      },
+      {
+        "condition": "train_median_after",
+        "mean": 0.487206524138693,
+        "sd": 0.005974559758179863
+      }
+    ]
+  },
+  "lstm": {
+    "summary": [
+      {
+        "condition": "after",
+        "eval_set": "ETRI",
+        "mean": 0.5611293859649122,
+        "sd": 0.027780613142995802
+      },
+      {
+        "condition": "after",
+        "eval_set": "exiD",
+        "mean": 0.5261343667772486,
+        "sd": 0.025409471273509666
+      },
+      {
+        "condition": "after",
+        "eval_set": "in_domain",
+        "mean": 0.7760062271443985,
+        "sd": 0.002635660487285001
+      },
+      {
+        "condition": "after",
+        "eval_set": "uniD",
+        "mean": 0.5064109839760835,
+        "sd": 0.029422743286347162
+      },
+      {
+        "condition": "before",
+        "eval_set": "ETRI",
+        "mean": 0.5268248746867168,
+        "sd": 0.0254435796705614
+      },
+      {
+        "condition": "before",
+        "eval_set": "exiD",
+        "mean": 0.5211057562674029,
+        "sd": 0.004866978121620465
+      },
+      {
+        "condition": "before",
+        "eval_set": "in_domain",
+        "mean": 0.6631192943365064,
+        "sd": 0.0018733502973037766
+      },
+      {
+        "condition": "before",
+        "eval_set": "uniD",
+        "mean": 0.5352035832301306,
+        "sd": 0.02131441674929804
+      }
+    ],
+    "macro": [
+      {
+        "condition": "after",
+        "mean": 0.5312249122394148,
+        "sd": 0.012257236592780073
+      },
+      {
+        "condition": "before",
+        "mean": 0.5277114047280834,
+        "sd": 0.012002869942129384
+      }
+    ]
+  },
+  "adaptation": {
+    "negative": 13,
+    "positive": 2,
+    "ci_below0": 9,
+    "ci_includes0": 6
+  }
+}

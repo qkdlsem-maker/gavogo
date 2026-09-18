@@ -1,0 +1,35 @@
+{
+  "table_mapping": {
+    "main": [
+      0,
+      2,
+      6,
+      8,
+      9
+    ],
+    "supplementary": [
+      3,
+      7,
+      12,
+      4,
+      5,
+      1,
+      10,
+      11
+    ]
+  },
+  "figure_mapping": {
+    "main": [
+      0,
+      6,
+      7
+    ],
+    "supplementary": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  }
+}
