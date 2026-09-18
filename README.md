@@ -1,11 +1,13 @@
-# GAVOGO — Scientific Reports R19 reproducibility release
+# GAVOGO — Scientific Reports reproducibility materials
 
 **Recording identities and feature timing affect the evaluation of lane change prediction across datasets**
 Hyerim Choi, Tae-Kook Kim, Tae-Wan Kim. Corresponding author: Tae-Kook Kim.
 
 Status: Scientific Reports submission preparation; not a claim of submission, peer review, or acceptance. Version **sr-r20-audit**, 2026-09-18.
 
-[Versioned Release](https://github.com/qkdlsem-maker/gavogo/releases/tag/sr-r20-audit) · [Current public materials](releases/sr-r20/) · [Reproducibility](docs/REPRODUCIBILITY.md) · [R19 table/figure map](docs/PAPER_MAP_R19.md) · [Data access](releases/sr-r20/DATA_ACCESS.md) · [Reuse conditions](releases/sr-r20/DATA_LICENSES.md)
+[Versioned Release](https://github.com/qkdlsem-maker/gavogo/releases/tag/sr-r20-audit) · [Current public materials](releases/sr-r20/) · [Reproducibility](docs/REPRODUCIBILITY.md) · [R19 table/figure map](docs/PAPER_MAP_R19.md) · [Updated data access](docs/DATA_ACCESS_R23.md) · [Reuse conditions](releases/sr-r20/DATA_LICENSES.md)
+
+**Documentation update R23 (18 September 2026):** the five ETRI input CSVs have been matched byte for byte to the directly downloadable 2019 public-portal archive. The historical S6 mixed-subset count is a row count, not a vehicle count; see [known limitations](docs/KNOWN_LIMITATIONS.md). These documentation corrections do not change the `sr-r20-audit` tag, Release assets, numerical tables or archived source. Historical data-access wording inside the frozen release should be read with the [current clarification](docs/DATA_ACCESS_R23.md).
 
 Main analysis uses highD/NGSIM/MiTra as source and ETRI/uniD/exiD as targets. EMT is excluded because the local conversion's physical interpretation remains unresolved. The study audits recording identities, feature timing, and matched continuation controls; it does not certify a universally leak-free or strict online benchmark.
 
